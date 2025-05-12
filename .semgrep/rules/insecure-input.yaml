@@ -1,0 +1,8 @@
+rules:
+  - id: insecure-os-command
+    pattern: os.system(f"...")
+    message: Untrusted input in os.system — possible command injection
+    severity: ERROR
+    languages: [python]
+    metadata:
+      category: security
