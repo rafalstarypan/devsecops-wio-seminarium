@@ -25,6 +25,7 @@ jobs:
           config: .semgrep/rules
 
       - name: Run pip-audit (dependency scan)
+        if: ${{ always() }}
         run: |
           pip install pip-audit
           pip-audit
